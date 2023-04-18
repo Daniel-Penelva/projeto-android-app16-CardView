@@ -1,6 +1,7 @@
 package com.formacaoandroidstudio.cardview.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerPostagem = findViewById(R.id.recyclerPostagem);
 
         /* Definir o Layout para organizar em uma lista unidimensional */
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayout.HORIZONTAL);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerPostagem.setLayoutManager(layoutManager);
 
         /* Definir o Adapter */
